@@ -1,0 +1,27 @@
+
+       
+        {% extends 'base.html'%}
+        {%block content%}
+        {% include "nav.html" with active_link='list' %}
+     
+  <section class="content">
+<h2>EAST-AFRICA</h2>
+
+
+<div class="list">
+ 
+ 
+ 
+  {%for blog in bookreview_list%}
+  <div class="blog card"> 
+  <h2 id="title">{{blog.title}}</h2>
+  <p id="date">by {{blog.author}} | {{blog.date}}</p>
+ <img src="{{blog.image.url}}" width="200px" alt="{{blog.title}}">
+  <p ><a href="{{blog.get_absolute_url}}" class="btn">Read more</a></p>
+            </div>
+  {%endfor%}
+
+  </div>
+  </section>
+            {% include "pagination.html" with page=page_obj %}
+          {%endblock%}

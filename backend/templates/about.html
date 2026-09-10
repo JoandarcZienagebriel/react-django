@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+  
+            </style>
+
+    </head>
+    <body>
+        {% extends 'base.html'%}
+        {%block content%}
+        {% include "nav.html" with active_link='about' %}
+        <section class="content">
+        <h2 id="title">ABOUT US</h2>
+        <div class="about-section">
+<div class="card" id="about-card">
+    
+    <img src="/static/img/traveler.png">
+    
+        <p>ADVENTUREUS, we are just ordinary people passionate about travelling and adventure.
+            Eager to share our experiences with you, so you can embark on your journey hopefully with new helpful info.</p>
+       </div>
+
+       <div class="columns">
+       <div class="card">
+        <h3>Email</h3>
+        <a> ✉ adventureus@gmail.com</a>
+       </div>
+       <div class="card">
+        <h3>Instagram</h3>
+        <a>🅾 @adventureus.com</a>
+       </div>
+       </div>
+       
+    </div>
+        </section>
+        
+{%endblock%}

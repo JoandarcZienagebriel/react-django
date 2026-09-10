@@ -1,0 +1,104 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link href="{% static 'css/pg.css' %}" rel="stylesheet">
+
+    </head>
+    <body>
+   <div class="container">
+        <nav>
+<div class="header">
+                 <h1 id="adventure"><a href="{%url 'home'%}">ADVENTUREUS</a></h1>
+
+<button id="menu-btn">
+                    
+                    ☰
+</button>
+</div>
+                 
+        <ul class="nav-items">
+               
+                <li><a href="{%url 'home'%}">Home</a></li>
+               <li> <a href="{%url 'list'%}"> East-Africa</a></li>
+                    
+               <li> <a href="{% url 'europelist'%}">West-Europe</a></li>
+               
+   
+                <li><a href="{%url 'about'%}">About us</a></li>
+                <li id="search-icon">
+                    <a href="">
+                    
+                    🔎︎
+                    </a>
+                 
+                </li>
+                
+               
+                {%if user.is_authenticated%}
+                
+                 
+                  
+                   <li> <form method="post" action="{%url 'logout'%}" >{%csrf_token%} 
+                        <button type="submit" id="logout">Logout</button>
+                      
+                   </form></li>
+                   {%else%}
+     <li><a href="{%url 'signup'%}">Sign up</a> </li>
+     <li><a href="{%url 'login'%}">Log in</a></li>
+        {%endif%}
+               
+             
+                </ul>
+     </nav>
+            
+                 
+            </div>
+     
+        {%block content%}
+{%endblock%}              
+              
+
+        
+
+<footer>
+   <div class="footer">
+   <ul>
+    <li >Support</li> 
+   <li> <a href="adventureus@gmail.com">FAQ</a></li>
+    <li><a href="adventureus@instagram.com">Forum</a></li>
+       <li> <a href="adventureus@facebook.com">Contact us</a></li>
+        </ul>
+  
+   <ul>
+    <li>Socials</li> 
+    <li><a href="mailTo:adventureus@gmail.com">Email</a></li>
+    <li><a href="adventureus@instagram.com">Instagram</a></li>
+        <li><a href="adventureus@facebook.com">Facebook</a></li>
+        </ul>
+</div>
+</footer>  
+</div>
+
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const navItems = document.querySelector(".nav-items");
+
+menuBtn.addEventListener("click", () => {
+    navItems.classList.toggle("active");
+});
+document.addEventListener('click', (event)=>{
+    if(!menuBtn.contains(event.target) &&
+    !navItems.contains(event.target)){
+        navItems.classList.remove('active')
+    }
+})
+</script>
+    
+</body>
+</html>

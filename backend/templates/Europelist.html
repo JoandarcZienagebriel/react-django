@@ -1,0 +1,28 @@
+
+        {% extends 'base.html'%}
+        {%block content%}
+   
+       {% include "nav.html" with active_link='europelist' %}
+   <section class="content">
+       <h2>WEST-EUROPE</h2>
+       
+
+
+<div class="list">
+ 
+ 
+  {%for euro in europe_list%}
+  <div class="card"> 
+  <h2 id="title">{{euro.title}}</h2>
+  <p id="date">by {{euro.author}} | {{euro.date}}</p>
+ <img src="{{euro.image.url}}" width="200px">
+<p><a href="{{euro.get_absolute_url}}" class="btn">Read more</a></p>
+            </div>
+  {%endfor%}
+
+  </div>
+</section>
+        {% include "pagination.html" with page=page_obj %}
+      {%endblock%}
+     
+  

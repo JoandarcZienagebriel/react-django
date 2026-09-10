@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style> 
+        .pagination{
+            text-align: center;
+        }
+            </style>
+
+    </head>
+    <body>
+
+
+<div class="pagination">
+ <span class="step-links">
+ {% if page.has_previous %}
+ <a href="?page={{ page.previous_page_number }}">Previous‹
+ {% endif %}
+ <span class="current">
+ Page {{ page.number }} of {{ page.paginator.num_pages }}.
+ </span>
+ {% if page.has_next %}
+ <a href="?page={{ page.next_page_number }}">Next</a>
+ {% endif %}
+ </span>
+</div>
+    </body>
+</html>

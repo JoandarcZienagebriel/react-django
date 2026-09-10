@@ -1,0 +1,49 @@
+
+        {% extends 'base.html'%}
+        {%block content%}
+        {% include "nav.html" with active_link='europe_detail' %}
+<section class="content">
+<div class="detail-layout">
+       <div class="section-detail">
+       
+  <h2>{{europe.title}}</h2>
+  <p>by {{europe.author}} | {{europe.date}}</p>
+  <img src="{{europe.image.url}}"  width="200px">
+  
+  <p class="body">{{europe.body}}</p>
+
+  
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li class="list"><a href="">ⓕ Facebook</a></li>
+      <li class="list"><a href="">[in] LinkedIn</a></li>
+      <li class="list"><a href="">🅾 Instagram</a></li>
+    </ul>
+  </div>
+</div>
+ 
+
+    <div class="comment">
+        <h3>Comments</h3>
+
+       {% for comment in europe.commenteurope_set.all %}
+        
+            <p class="comment_author">Author: {{ comment.author }}</p>
+            <p class="comment_given">Comment: {{ comment }}</p>
+           
+        {% endfor %}
+    </div>
+
+    <div class="comment-form">
+        <h4>Add a comment</h4>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Save</button>
+        </form>
+    </div>
+    </section>
+    {%endblock%}

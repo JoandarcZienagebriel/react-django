@@ -1,0 +1,59 @@
+
+        {%extends 'base.html'%}
+{%block content%}
+
+<section class="hero">
+      
+        
+    <h1 id="blurb">IT'S ABOUT TIME THAT YOU START TRAVELLING. GET INFO ABOUT THE TRENDING TRAVELING DESTINATIONS FROM ADVENTUREUS.</h1>
+ 
+    
+          <ul class="tips">
+            <li>Get the best time of your life using your budget</li>
+            <li>Must taste foods.</li>
+            <li>Must visit amusement destinations.</li>
+            <li>What time of the year to travel.</li>
+          </ul>
+<div class="cta">
+   <a href="{%url 'about'%}" class="btn" id="about-us">Learn more about us</a>
+<a  href="{%url 'signup'%}" class="btn" id="sign">Sign up</a>
+</div>
+</section>
+
+    <section class="second">
+ <h3>RECENT POSTS</h3>
+        <div class="columns">
+           
+        <div class="card">
+          <h3>Venice, Italy</h3>
+          <img src="/static/img/venice.jpeg" alt="picture of Venice">
+      
+      <p>Venice is a unique city in Italy famous for its canals, historic architecture,
+         and romantic atmosphere. Visitors enjoy exploring its waterways, beautiful squares, and world-renowned cultural landmarks.</p>
+        </div>
+
+       <div class="card">
+          <h3>Diani Beach</h3>
+          <img src="/static/img/3.png" alt="Diani Beach">
+      
+      <p>Diani Beach is a stunning coastal destination in Kenya known for its soft white sand, clear turquoise waters,
+         and palm-lined shoreline. It is a popular spot for swimming, snorkeling, diving, and relaxing in a tropical setting.</p>
+        </div>
+
+
+        <div class="card">
+          <h3>Asmara, Eritrea</h3>
+          <img src="/static/img/5.png" alt="Venice">
+      
+      <p>Asmara is the capital of Eritrea and is celebrated for its well-preserved modernist architecture and pleasant highland climate. 
+        The city offers a blend of African and Italian influences, reflected in its buildings, cafés, and cultural heritage.</p>
+        </div>
+</div>
+    </section>
+    
+      {%endblock%}
+      <script>
+
+              </script>
+
+</html>

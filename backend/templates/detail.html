@@ -1,0 +1,50 @@
+
+        {% extends 'base.html'%}
+        {%block content%}
+        {% include "nav.html" with active_link='detail' %}
+        <section class="content">
+<div class="detail-layout">
+       <div class="section-detail">
+       
+  <h2>{{bookreview.title}}</h2>
+  <p>by {{bookreview.author}} | {{bookreview.date}}</p>
+  <img src="{{bookreview.image.url}}" width="200px">
+  
+  <p class="body">{{bookreview.body}}</p>
+
+  
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li class="list"><a href="">ⓕ Facebook</a></li>
+      <li class="list"><a href="">[in] LinkedIn</a></li>
+      <li class="list"><a href="">🅾 Instagram</a></li>
+    </ul>
+  </div>
+</div>
+ 
+
+    <div class="comment">
+        <h3>Comments</h3>
+
+        {% for comment in bookreview.comment_set.all %}
+        
+            <p class="comment_author">Author: {{ comment.author }}</p>
+            <p class="comment_given">Comment: {{ comment }}</p>
+           
+        {% endfor %}
+    </div>
+
+    <div class="comment-form">
+        <h4>Add a comment</h4>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Save</button>
+        </form>
+    </div>
+    </section>
+{%endblock%} 
+  
