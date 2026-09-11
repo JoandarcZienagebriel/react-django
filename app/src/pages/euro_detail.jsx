@@ -7,7 +7,7 @@ export default function AfricaDetail(){
     const {pk} = useParams();
     useEffect(() => {
         axios
-            .get(`http://127.0.0.1:8000/api/europe/${pk}/`)
+            .get(`https://react-django-nine.vercel.app/api/europe/${pk}/`)
             .then((response) => {
                 setDetail(response.data);
             })

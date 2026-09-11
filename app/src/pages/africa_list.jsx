@@ -9,7 +9,7 @@ export default function AfricaList(){
 const[list, setList] = useState([]);
 useEffect(()=>{
 axios.
-get('http://127.0.0.1:8000/api/')
+get('https://react-django-nine.vercel.app/api')
 .then((response)=>{
   setList(response.data);
 
