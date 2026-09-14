@@ -62,6 +62,11 @@ CORS_ORIGIN_WHITELIST = (
     'http://localhost:127.0.0.1:8000',
 )
 
+CORS_ALLOWED_ORIGINS = [
+    "https://react-django-git-main-joandarc-s-projects.vercel.app/"
+]
+
+
 
 ROOT_URLCONF = 'django_admin.urls'
 
