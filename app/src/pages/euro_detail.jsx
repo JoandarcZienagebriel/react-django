@@ -7,7 +7,7 @@ export default function AfricaDetail(){
     const {pk} = useParams();
     useEffect(() => {
         axios
-            .get(`https://react-django-p78r.onrender.com/api/europe/${pk}/`)
+            .get(`${import.meta.env.VITE_API_URL}/api/europe/${pk}/`)
             .then((response) => {
                 setDetail(response.data);
             })

@@ -8,7 +8,7 @@ export default function AfricaDetail(){
     const {pk} = useParams();
     useEffect(() => {
         axios
-            .get(`https://react-django-p78r.onrender.com/api/${pk}/`)
+            .get(`${import.meta.env.VITE_API_URL}/api/${pk}/`)
             .then((response) => {
                 setDetail(response.data);
             })
@@ -38,7 +38,7 @@ x
                         <p className="body">
                             {detail.body}
                         </p>
-                        <Link to={'/africa'} class="btn">Back to List</Link>
+                        <Link to={'/africa'} className="btn">Back to List</Link>
                     </div>
                     
                 )}
