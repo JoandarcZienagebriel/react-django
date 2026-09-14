@@ -57,17 +57,15 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:5173',
-    'http://localhost:127.0.0.1:8000',
-)
 
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
     "https://react-django-nine.vercel.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://react-django-nine.vercel.app",
+    "https://react-django-git-main-joandarc-s-projects.vercel.app",
 ]
 
 
