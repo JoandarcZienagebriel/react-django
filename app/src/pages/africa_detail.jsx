@@ -8,7 +8,7 @@ export default function AfricaDetail(){
     const {pk} = useParams();
     useEffect(() => {
         axios
-            .get(`https://react-django-nine.vercel.app/api/${pk}/`)
+            .get(`https://react-django-p78r.onrender.com/api/${pk}/`)
             .then((response) => {
                 setDetail(response.data);
             })

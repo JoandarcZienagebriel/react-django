@@ -6,7 +6,7 @@ const [list, setList] = useState([]);
 var uniqueId = 1
 useEffect(()=>{
     axios.
-get('https://react-django-nine.vercel.app/api/europe')
+get('https://react-django-p78r.onrender.com/api/europe')
 .then((response)=>{
 setList(response.data)
 })
