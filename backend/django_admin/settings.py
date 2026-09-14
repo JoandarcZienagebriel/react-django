@@ -63,9 +63,12 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 CORS_ALLOWED_ORIGINS = [
-    "https://react-django-git-main-joandarc-s-projects.vercel.app/"
+    "https://react-django-git-main-joandarc-s-projects.vercel.app/",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://react-django-git-main-joandarc-s-projects.vercel.app/",
+]
 
 
 ROOT_URLCONF = 'django_admin.urls'
