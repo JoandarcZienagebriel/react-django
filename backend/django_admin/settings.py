@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q)hs=cycnf+(&=tm)9e436m-teq+t822$zq-eeyd7aj78le$ub'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['react-django-p78r.onrender.com']
 
@@ -63,11 +63,11 @@ CORS_ORIGIN_WHITELIST = (
 )
 
 CORS_ALLOWED_ORIGINS = [
-    "https://react-django-git-main-joandarc-s-projects.vercel.app/",
+    "https://react-django-git-main-joandarc-s-projects.vercel.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://react-django-git-main-joandarc-s-projects.vercel.app/",
+    "https://react-django-git-main-joandarc-s-projects.vercel.app",
 ]
 
 
