@@ -28,7 +28,7 @@ export default function AfricaDetail(){
                         <p>
                             by {detail.author} | {detail.date}
                         </p>
-x
+
                         <img
                             src={detail.image}
                             width="200"
